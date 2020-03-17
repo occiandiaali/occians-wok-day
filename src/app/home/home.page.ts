@@ -79,19 +79,21 @@ export class HomePage {
     .then(json => {
       this.workerList = json.werkers;
        //console.log(`WorkerList is: ${typeof this.workerList}`);
-      for (const werker of this.workerList) {
-        console.log(werker.skill);
 
         for (const werk of this.workerList) {
           if (this.category === werk.skill) { // display only matched workers
           marker([werk.latitude, werk.longitude]).addTo(this.map)
             .bindPopup(`<img src="${werk.imageUrl}"/><br /><b>${werk.name}</b><br />${werk.skill}<br />Rating:${werk.rating}`)
             .openPopup().on('click', () => {
-              this.presentModal(werk.name, werk.imageUrl, werk.telephone, werk.skill); 
+              this.presentModal(
+                werk.name, 
+                werk.imageUrl, 
+                werk.telephone, 
+                werk.skill
+                ); 
             });
           } // if block
-        } // inner for loop
-      } // outter for loop
+        } // for loop
     });
   } // method show selected
 
