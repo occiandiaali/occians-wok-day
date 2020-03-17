@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { NavParams, ModalController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-modal',
@@ -13,9 +13,7 @@ export class ModalPage implements OnInit {
   @Input() telephone: string;
   @Input() skill: string;
 
-  constructor(navParams: NavParams, public modalCtrl: ModalController) {
-    // console.log(navParams.get(`Worker name: ${this.name}`));
-  }
+  constructor(public modalCtrl: ModalController) { }
 
   ngOnInit() {
   }
