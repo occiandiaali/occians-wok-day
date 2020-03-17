@@ -33,6 +33,18 @@ Install capacitor (To access device geolocation functionality)
 npm install --save @capacitor/core @capacitor/cli
 ```
 
+Clone from the repo onto your machine
+
+```
+git clone https://github.com/occiandiaali/occians-wok-day.git
+```
+
+Run the node install command
+
+```
+npm install
+```
+
 
 ## Built With
 
