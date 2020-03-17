@@ -1,0 +1,59 @@
+{ 
+    "werkers": [
+    {
+        "name": "Festus Man",
+        "telephone": "080123456",
+        "rating": "5.5",
+        "imageUrl": "https://cdn.pixabay.com/photo/2017/06/26/02/47/people-2442565__340.jpg",
+        "longitude": "3.3605",
+        "latitude": "6.56963",
+        "skill": "mechanic"
+    },
+    {
+        "name": "Bola Woman",
+        "telephone": "080123456",
+        "rating": "7.5",
+        "imageUrl": "https://cdn.pixabay.com/photo/2018/01/13/19/39/fashion-3080644_960_720.jpg",
+        "longitude": "3.3689",
+        "latitude": "6.55963",
+        "skill": "electrician"
+    },
+    {
+        "name": "Kunle Boy",
+        "telephone": "080123456",
+        "rating": "6.5",
+        "imageUrl": "https://cdn.pixabay.com/photo/2015/06/19/09/39/lonely-814631_960_720.jpg",
+        "longitude": "3.3631",
+        "latitude": "6.57963",
+        "skill": "laundry"
+    },
+    {
+        "name": "Mary Amaka",
+        "telephone": "080123456",
+        "rating": "8.5",
+        "imageUrl": "https://cdn.pixabay.com/photo/2017/02/16/23/10/smile-2072907_960_720.jpg",
+        "longitude": "3.3670",
+        "latitude": "6.54963",
+        "skill": "tutor"
+    },
+    {
+        "name": "Benita Oye",
+        "telephone": "080123456",
+        "rating": "3.5",
+        "imageUrl": "https://cdn.pixabay.com/photo/2016/11/29/10/10/girl-1868930_960_720.jpg",
+        "longitude": "3.3720",
+        "latitude": "6.55963",
+        "skill": "generator technician"
+    },
+    {
+        "name": "Ahmad Ahmad",
+        "telephone": "080123456",
+        "rating": "8.5",
+        "imageUrl": "https://cdn.pixabay.com/photo/2018/01/04/08/04/people-3060107_960_720.jpg",
+        "longitude": "3.3702",
+        "latitude": "6.5693",
+        "skill": "plumber"
+    }
+   ]
+}
+

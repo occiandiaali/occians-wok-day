@@ -1,20 +1,31 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center ion-padding app-title">
+      WokDay
     </ion-title>
+    <ion-item color="primary"> 
+      <ion-label>Search for</ion-label>
+      <ion-select ok-text="OK" cancel-text="Cancel" [(ngModel)]="category" (ionChange)="showSelected()">
+        <ion-select-option value="mechanic">mechanic</ion-select-option>
+        <ion-select-option value="plumber">plumber</ion-select-option>
+        <ion-select-option value="electrician">electrician</ion-select-option>
+        <ion-select-option value="cleaner">cleaner</ion-select-option>
+        <ion-select-option value="nanny">nanny</ion-select-option>
+        <ion-select-option value="tutor">tutor</ion-select-option>
+        <ion-select-option value="carpenter">carpenter</ion-select-option>
+        <ion-select-option value="generator tech">generator technician</ion-select-option>
+        <ion-select-option value="waste remover">waste disposal</ion-select-option>
+      </ion-select>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">WokDay</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <div id="mapId" ></div>
 </ion-content>
