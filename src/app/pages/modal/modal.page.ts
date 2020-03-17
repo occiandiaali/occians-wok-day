@@ -11,6 +11,7 @@ export class ModalPage implements OnInit {
   @Input() name: string;
   @Input() imageUrl: string;
   @Input() telephone: string;
+  @Input() skill: string;
 
   constructor(navParams: NavParams, public modalCtrl: ModalController) {
     // console.log(navParams.get(`Worker name: ${this.name}`));
