@@ -53,6 +53,42 @@
         "longitude": "3.3702",
         "latitude": "6.5693",
         "skill": "plumber"
+    },
+    {
+        "name": "Solomon James",
+        "telephone": "080123456",
+        "rating": "4.5",
+        "imageUrl": "https://cdn.pixabay.com/photo/2017/02/04/12/25/man-2037255__340.jpg",
+        "longitude": "3.3702",
+        "latitude": "6.5693",
+        "skill": "electrician"
+    },
+    {
+        "name": "Olawale Olaitan",
+        "telephone": "080123456",
+        "rating": "8.5",
+        "imageUrl": "https://cdn.pixabay.com/photo/2016/09/24/03/20/passion-1690965__340.jpg",
+        "longitude": "3.3702",
+        "latitude": "6.5693",
+        "skill": "plumber"
+    },
+    {
+        "name": "Abigail Abiboy",
+        "telephone": "080123456",
+        "rating": "8.5",
+        "imageUrl": "https://cdn.pixabay.com/photo/2013/03/27/12/21/girl-97088__340.jpg",
+        "longitude": "3.3702",
+        "latitude": "6.5693",
+        "skill": "laundry"
+    },
+    {
+        "name": "Sufi Shona",
+        "telephone": "080123456",
+        "rating": "8.5",
+        "imageUrl": "https://cdn.pixabay.com/photo/2015/01/27/09/58/human-613601__340.jpg",
+        "longitude": "3.3702",
+        "latitude": "6.5693",
+        "skill": "cleaner"
     }
    ]
 }
