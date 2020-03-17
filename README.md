@@ -2,7 +2,7 @@
 
 A play on the local vernacular to enquire for available, short-term/contract jobs, and the English description of the day of the week that isn't a weekend. Find work for your specific skill-set at a location near you. Find skilled workers around you in 2 taps of your screen.
 
-![alt text](WokDay_screenshot.png)
+![alt text](WokDay_screenshot.png) ![alt text](wokday_screen6.png)
 
 ## Getting Started
 
