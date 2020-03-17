@@ -39,13 +39,14 @@ export class HomePage {
     this.leafletMap();
   } // get location
 
-  async presentModal(name, imageUrl, telephone) {
+  async presentModal(name, imageUrl, telephone, skill) {
     const modal = await this.modalController.create({
       component: ModalPage,
       componentProps: {
         name,
         imageUrl,
-        telephone
+        telephone,
+        skill
       }
     });
     return await modal.present();
@@ -83,8 +84,10 @@ export class HomePage {
 
         for (const werk of this.workerList) {
           marker([werk.latitude, werk.longitude]).addTo(this.map)
-            .bindPopup(werk.name)
-            .openPopup().on('click', () => {this.presentModal(werk.name, werk.imageUrl, werk.telephone); });
+            .bindPopup(`<img src="${werk.imageUrl}"/><br /><b>${werk.name}</b><br />${werk.skill}<br />Rating:${werk.rating}`)
+            .openPopup().on('click', () => {
+              this.presentModal(werk.name, werk.imageUrl, werk.telephone, werk.skill); 
+            });
         } // inner for loop
       } // outter for loop
     });
