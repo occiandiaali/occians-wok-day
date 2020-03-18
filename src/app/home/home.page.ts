@@ -19,6 +19,7 @@ import '../../assets/icon/marker-icon-2x.png';
 })
 export class HomePage {
   map: Map;
+  
   latitude: any;
   longitude: any;
   category: string;
@@ -73,13 +74,19 @@ export class HomePage {
 
 
   showSelected() {
+    
     console.log(`Selected: ${this.category}`);
     fetch('../../assets/dummy.json')
     .then(res => res.json())
     .then(json => {
       this.workerList = json.werkers;
        //console.log(`WorkerList is: ${typeof this.workerList}`);
-
+      //  if(marker !== null) {
+      //    this.map.eachLayer((marker) => {
+      //      this.map.removeLayer(marker);
+      //    });
+      //  } // causes map not to show
+       
         for (const werk of this.workerList) {
           if (this.category === werk.skill) { // display only matched workers
           marker([werk.latitude, werk.longitude]).addTo(this.map)
@@ -91,7 +98,7 @@ export class HomePage {
                 werk.telephone, 
                 werk.skill
                 ); 
-            });
+            }); // open popup
           } // if block
         } // for loop
     });
