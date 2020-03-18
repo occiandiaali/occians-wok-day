@@ -1,9 +1,40 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-title>WokDay</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
+  <ion-grid>
+    <ion-row id="above-login-logo">
+      <ion-col class="ion-text-center">
+        <img src="https://cdn.pixabay.com/photo/2014/04/03/10/03/google-309740__340.png" alt="logo" />
+        <form>
+          <ion-title id="app-title">WokDay</ion-title>
+          <ion-item lines="full">
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="text" required></ion-input>
+          </ion-item>
+      
+          <ion-item lines="full">
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" required></ion-input>
+          </ion-item>
+      
+          <ion-row>
+            <ion-col>
+              <ion-button type="submit" color="primary" expand="block" [routerLink]="['/home']">Sign In</ion-button>
+              <!-- <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a> -->
+            </ion-col>
+          </ion-row>
+        </form>
 
+        <span class="divider line one-line">or</span>
+
+        <span class="already">Are you new a user?</span>
+
+        <ion-button [routerLink]="['/register']" expand="block" color="primary">Create account</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
