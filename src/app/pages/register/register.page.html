@@ -1,9 +1,48 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>register</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Create account</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <form>
+    <ion-item lines="full" id="first-item-reg">
+      <ion-icon name="person-add-outline" slot="start"></ion-icon>
+      <ion-input type="file" required></ion-input>
+    </ion-item>
 
+    <ion-item lines="full">
+      <ion-label position="floating">first name</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">last name</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">email</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label>choose location</ion-label>
+    <ion-select value="" okText="Set" cancelText="Cancel">
+      <ion-select-option value="arep-wa-gboro">Magboro-Wawa</ion-select-option>
+      <ion-select-option value="opic-berger">Opic-Berger</ion-select-option>
+      <ion-select-option value="alau-godo">Alausa-Magodo</ion-select-option>
+      <ion-select-option value="alape-gudu">Alapere-Ogudu</ion-select-option>
+    </ion-select>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="primary" expand="block" [routerLink]="['/login']">Sign Up</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
 </ion-content>
