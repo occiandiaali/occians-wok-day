@@ -3,12 +3,16 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Create account</ion-title>
+    <ion-title>Account creation</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <form>
+    <ion-item lines="full">
+      <ion-text>There are 2 forms below, one for Workers and the other for Employers.
+      Please fill out and submit only ONE form, either as a Worker or an Employer</ion-text>
+    </ion-item>
     <ion-item lines="full" id="first-item-reg">
       <ion-icon name="person-add-outline" slot="start"></ion-icon>
       <ion-input type="file" required></ion-input>
@@ -16,17 +20,22 @@
 
     <ion-item lines="full">
       <ion-label position="floating">first name</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" placeholder="worker first name" required></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-label position="floating">last name</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" placeholder="worker last name" required></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-label position="floating">email</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" placeholder="worker email" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">phone</ion-label>
+      <ion-input type="phone" placeholder="worker phone number" required></ion-input>
     </ion-item>
 
     <ion-item lines="full">
@@ -41,7 +50,35 @@
 
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="primary" expand="block" [routerLink]="['/login']">Sign Up</ion-button>
+        <ion-button type="submit" color="primary" expand="block" [routerLink]="['/login']">Worker register</ion-button>
+      </ion-col>
+    </ion-row>
+    <p id="reg-info">*Location is the worker's choice of places that they prefer to work at..</p>
+
+
+    <ion-item lines="full">
+      <ion-label position="floating">first name</ion-label>
+      <ion-input type="text" placeholder="employer first name" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">last name</ion-label>
+      <ion-input type="text" placeholder="employer last name" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">email</ion-label>
+      <ion-input type="text" placeholder="employer email" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">phone</ion-label>
+      <ion-input type="phone" placeholder="employer phone number" required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="primary" expand="block" [routerLink]="['/login']">Employer register</ion-button>
       </ion-col>
     </ion-row>
   </form>

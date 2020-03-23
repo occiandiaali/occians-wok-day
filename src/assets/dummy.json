@@ -10,6 +10,24 @@
         "skill": "mechanic"
     },
     {
+        "name": "Abayomi Manhood",
+        "telephone": "080123456",
+        "rating": "9.5",
+        "imageUrl": "https://cdn.pixabay.com/photo/2017/06/26/02/47/people-2442565__340.jpg",
+        "longitude": "3.4105",
+        "latitude": "6.7123",
+        "skill": "mechanic"
+    },
+    {
+        "name": "Shakira Shakira",
+        "telephone": "080123456",
+        "rating": "8.5",
+        "imageUrl": "https://cdn.pixabay.com/photo/2017/06/26/02/47/people-2442565__340.jpg",
+        "longitude": "3.4005",
+        "latitude": "6.7096",
+        "skill": "laundry"
+    },
+    {
         "name": "Bola Woman",
         "telephone": "080123456",
         "rating": "7.5",
