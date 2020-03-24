@@ -1,15 +1,11 @@
 import { Component } from "@angular/core";
-import { Map, latLng, tileLayer, Layer, marker } from "leaflet";
+import { Map, tileLayer, marker } from "leaflet";
 import { Geolocation } from "@capacitor/core";
 
 import { ModalController } from "@ionic/angular";
 import { ModalPage } from "../pages/modal/modal.page";
 
-//import * as data from './../intel/dummy.json';
-
 import "../../assets/icon/marker-icon-2x.png";
-
-// import workers from '../../assets/workerLocs.json';
 
 @Component({
   selector: "app-home",
@@ -25,6 +21,7 @@ export class HomePage {
   workerList = []; // assignment op instead of colon to avoid "property does not exist on type never error"
 
   constructor(public modalController: ModalController) {}
+
   ionViewDidEnter() {
     this.getLocation();
   }
@@ -64,13 +61,14 @@ export class HomePage {
     marker([this.latitude, this.longitude])
       .addTo(this.map)
       .bindPopup("You are here")
-      .openPopup()
-    
+      .openPopup();
+
     console.log(
-      `From leafletMap(2) -> Latitude: ${this.latitude} | Longitude: ${this.longitude}`
+      `From leafletMap -> Latitude: ${this.latitude} | Longitude: ${this.longitude}`
     );
   } // leaflet map
 
+  // function called on ion select
   showSelected() {
     console.log(`Selected: ${this.category}`);
     fetch("../../assets/dummy.json")
@@ -81,6 +79,10 @@ export class HomePage {
         if (marker !== null) {
           this.map.eachLayer(marker => {
             this.map.removeLayer(marker);
+          });
+        } // causes map not to show without attribution
+        for (const werk of this.workerList) {
+          if (this.category === werk.skill) {
             // add attribution AGAIN? to show map???
             tileLayer(
               "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
@@ -90,11 +92,10 @@ export class HomePage {
                   'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
               }
             ).addTo(this.map);
-          });
-          
-        } // causes map not to show without attribution 
-        for (const werk of this.workerList) {
-          if (this.category === werk.skill) {
+            marker([this.latitude, this.longitude]) // and AGAIN add user marker???
+              .addTo(this.map)
+              .bindPopup("You are here")
+              .openPopup();
             // display only matched workers
             marker([werk.latitude, werk.longitude])
               .addTo(this.map)
@@ -110,9 +111,7 @@ export class HomePage {
                   werk.skill
                 );
               }); // open popup
-              
           } // if block
-          
         } // for loop
       });
   } // method show selected
@@ -121,5 +120,4 @@ export class HomePage {
   ionViewWillLeave() {
     this.map.remove();
   }
-
 } // class
